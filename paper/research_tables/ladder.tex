@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering\small
+\caption{本文内部配置与完整 STAND 的组件递进结果（\%）。各配置共享 DINOv3 编码器及同一外部测试集。L1 仅采用全局分类头，L2 在其基础上加入正交投影，L3 再加入局部分支形成教师，完整 STAND 执行目标池学生适应。L1--L3 是本文的实验配置编号，不对应独立发表的方法。各性能列最高值加粗。}
+\label{tab:ladder}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+本文配置 & 准确率$\uparrow$ & 精确率$\uparrow$ & 召回率$\uparrow$ & F1$\uparrow$ & AUC$\uparrow$\\
+\midrule
+冻结全局分类（L1） & 80.60 & 97.41 & 66.44 & 79.00 & 94.02\\
+全局分类与正交投影（L2） & 83.41 & \textbf{97.98} & 71.25 & 82.50 & 94.42\\
+STAND 教师（L3） & 88.36 & 93.98 & 84.20 & 88.82 & 95.09\\
+STAND（完整方法） & \textbf{91.38} & 93.87 & \textbf{90.19} & \textbf{91.99} & \textbf{97.25}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

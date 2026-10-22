@@ -1,0 +1,17 @@
+{
+  "tag": "stand",
+  "args": {
+    "conf": "adapt0.6",
+    "rounds": "2",
+    "src": "0",
+    "mil": "1",
+    "nap": "1",
+    "tstd": "1",
+    "npool": "0",
+    "share": "-1",
+    "seed": "0",
+    "teacher": "L3",
+    "k": "8",
+    "C": "0.1"
+  }
+}

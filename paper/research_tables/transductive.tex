@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering\small
+\caption{固定配额转导变体的采集批次诊断（\%）。学生在待测折分数两端各选取 30\% 的照片训练两轮，完整 STAND 根据教师预测比例确定两类样本数量，并使用独立适应池。每折照片数 / 正类数为 485/271、422/113、318/117、370/171、339/115。准确率和 AUC 两区内逐列加粗最高值。}
+\label{tab:trans}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+模型与指标 & 折 0 & 折 1 & 折 2 & 折 3 & 折 4\\
+\midrule
+\multicolumn{6}{l}{\textit{决策准确率}}\\
+\addlinespace[2pt]
+教师 默认准确率 & 94.23 & 36.02 & 85.53 & 94.05 & \textbf{99.41}\\
+教师 调整阈值准确率 & 95.46 & \textbf{92.18} & \textbf{93.71} & 87.84 & \textbf{99.41}\\
+固定配额学生 默认准确率 & \textbf{99.79} & 83.41 & 90.88 & \textbf{98.65} & 98.23\\
+\midrule
+\multicolumn{6}{l}{\textit{排序 AUC}}\\
+\addlinespace[2pt]
+教师 AUC & 99.57 & 97.32 & 97.40 & 98.37 & \textbf{100.00}\\
+固定配额学生 AUC & \textbf{99.99} & \textbf{98.72} & \textbf{99.32} & \textbf{99.99} & \textbf{100.00}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

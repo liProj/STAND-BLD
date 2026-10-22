@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\caption{外部测试的采样区间与阈值对照，指标按百分数表示。区间为单模型的拍摄者聚类 bootstrap 95\% 区间。四种微调 CNN 报告三个种子的指标均值。点估计的列最高值加粗。}
+\label{tab:external_details}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+方法 & 准确率 & 准确率区间 & AUC & AUC 区间 & \makecell{调整阈值\\准确率}\\
+\midrule
+公开 EfficientNetV2-S\cite{tan2021,waldo2026} & 81.30 & 79.48--83.20 & 89.64 & 88.18--91.17 & 80.77\\
+微调 EfficientNetV2-S\cite{tan2021} & 73.53 & --- & 92.11 & --- & 80.44\\
+微调 Inception-v3\cite{szegedy2016} & 71.17 & --- & 85.24 & --- & 73.76\\
+微调 MobileNetV3-Large\cite{howard2019} & 69.31 & --- & 84.46 & --- & 63.81\\
+微调 ResNet-50\cite{he2016} & 71.26 & --- & 85.10 & --- & 72.97\\
+L1 冻结全局分类\cite{simeoni2026} & 80.60 & 77.90--83.24 & 94.02 & 92.94--95.07 & 86.75\\
+L2 加入正交投影 & 83.41 & 81.08--85.71 & 94.42 & 93.37--95.42 & 87.18\\
+L3 全局—局部教师 & 88.36 & 86.79--89.96 & 95.09 & 94.18--95.96 & 88.42\\
+\textbf{STAND（本文）} & \textbf{91.38} & 90.07--92.78 & \textbf{97.25} & 96.59--97.87 & \textbf{91.06}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

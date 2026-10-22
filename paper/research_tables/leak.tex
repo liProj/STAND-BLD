@@ -1,0 +1,18 @@
+\begin{table}[htbp]
+\centering\small
+\caption{五次随机划分中的训练—测试采集关系。间隔单位为秒，其余数值为百分数。粗体标示准确率列中最强的采集代理预测，重叠比例与时间间隔用于描述采集联系。}
+\label{tab:leak}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrrr}
+\toprule
+种子 & \makecell{共享\\采集批次} & \makecell{共享\\连拍} & \makecell{中位\\间隔} & \makecell{10 秒\\以内} & \makecell{时间近邻\\准确率} & \makecell{特征近邻\\准确率} & \makecell{特征近邻\\共享采集批次}\\
+\midrule
+0 & 100.00 & 70.10 & 6.00 & 66.67 & \textbf{100.00} & 98.97 & 91.41\\
+1 & 100.00 & 75.95 & 5.00 & 71.48 & \textbf{100.00} & 97.94 & 91.75\\
+2 & 100.00 & 76.29 & 5.00 & 71.82 & \textbf{100.00} & \textbf{99.31} & 91.07\\
+3 & 100.00 & 76.98 & 5.00 & 75.26 & \textbf{100.00} & 96.56 & 90.38\\
+4 & 100.00 & 72.51 & 6.00 & 68.73 & \textbf{100.00} & 98.28 & 87.29\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

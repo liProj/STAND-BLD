@@ -1,0 +1,32 @@
+{
+  "core_algorithm_unchanged": true,
+  "source_hashes": {
+    "common.py": "acf5db3d66c38ff0ef30b97e3939f637a8733bb7b4b9fb997a509dfba581c362",
+    "methods.py": "8a81eb6189bacb357f90621127221dd9c26c00a425a91ae01de19f4f458ca890",
+    "distill.py": "158039eceb927123b090278c421350d5a5d990df0d24a0196c1d662ad737d30c",
+    "distill_session.py": "f9aa038d1846ce5d0feb29c74662f74e54697d9516fd69a038c271512c965a12",
+    "feats.py": "0f899acab6d5a06f996343b11afc8e31e3949973b4a2df82438ddeb805dccac0",
+    "feats_siglip.py": "ac3dca7960eaed70256d06e62d13d3f206831c9810b752ddba3037e47498788e",
+    "prep.py": "515706a16a7ea0f0b60de19b29ed4eb9207c893b5871ccaf917708d87ff83a1e",
+    "splits.py": "3d62813fbf8a36b6c4ecc1ccfe4479569adff5c82f029e7bb7085a0305d9903f",
+    "run_ours.py": "f0da3e6b5d69b78991cb65646efcb9e650c3636af7c5b7c0cdd3eb89beec2043",
+    "run_recent_baselines_20261022.py": "fa00419ed36007a18263cfede53a53a4f344f6db14b859e45067d82df9bc6e08",
+    "finetune.py": "e207472d555b233a5c57cf78624c8678f29f16cefed4601e5cc2ef23613bfa27",
+    "author_ckpt.py": "b74c6b2981ca2346bbbda68865eb10a2cc8d74ecaba89bff0dd6a1d14436887d",
+    "audit.py": "7de364bf67924bacb4ce65c23502d0619c2509835e975c887012c3fe4f90875b"
+  },
+  "data_rows": {
+    "source": 1934,
+    "pool": 2976,
+    "dev": 527,
+    "test": 1856
+  },
+  "observer_names_and_coordinates_excluded": true,
+  "external_user_ids_replaced_with_shared_anonymous_groups": true,
+  "runtime_versions": {
+    "numpy": "2.4.1",
+    "pandas": "2.3.3",
+    "torch": "2.9.1",
+    "scikit-learn": "1.7.2"
+  }
+}

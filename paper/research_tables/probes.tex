@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\caption{采集关联诊断（\%）。前四行使用非图像元数据，缩略图保留粗略颜色和形状，DINOv3 为冻结视觉表征对照。各列最高值加粗。代理预测准确率反映采集信息与标签的关联，AUC 小于 50 表示预测方向在采集批次间反转。}
+\label{tab:probes}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrr}
+\toprule
+输入 & 随机准确率 & 随机 AUC & 采集批次准确率 & 采集批次汇总 AUC\\
+\midrule
+仅拍摄时间 & 99.07 & 99.96 & 75.13 & 82.70\\
+相机元数据与时间 & \textbf{99.69} & \textbf{99.99} & 64.22 & 61.99\\
+不含时间的相机元数据 & 75.08 & 78.20 & 33.92 & 19.10\\
+仅设备标识 & 67.48 & 64.11 & 48.91 & 51.93\\
+单像素平均颜色 & 68.05 & 71.14 & 47.21 & 43.33\\
+$4\times4$ 缩略图 & 82.32 & 89.57 & 40.64 & 36.19\\
+$8\times8$ 缩略图 & 84.28 & 91.11 & 44.47 & 40.48\\
+冻结 DINOv3 全局特征 & 99.28 & 99.93 & \textbf{86.19} & \textbf{95.73}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

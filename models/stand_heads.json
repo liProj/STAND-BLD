@@ -1,0 +1,15 @@
+{
+  "backbone": "vit_base_patch16_dinov3.lvd1689m",
+  "resolution": 384,
+  "global_dimension": 768,
+  "patch_grid": [
+    24,
+    24
+  ],
+  "tag": "stand",
+  "seed": 0,
+  "source_checkpoint_sha256": "4a571736bbf6bf0af16b9911af3698d981c2ff650a4fc3261a8b963040c64241",
+  "npz_sha256": "da31b9668d34631104a298f421f4ef32e0507de378c90305ef458136aa194f67",
+  "contents": "Only learned student heads, projection bases and normalization statistics; no foundation encoder.",
+  "normalization": "Global: full adaptation pool fit/score; local: selected-photo fit statistics replaced by full-pool statistics for scoring, without refitting."
+}

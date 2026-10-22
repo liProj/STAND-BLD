@@ -1,0 +1,4 @@
+# CPU-only verification of supplied predictions and exported classifier heads.
+numpy
+pandas
+scikit-learn

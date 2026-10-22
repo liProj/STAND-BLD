@@ -1,0 +1,35 @@
+{
+  "validation_date": "2026-10-23",
+  "manifests": {
+    "source_images": 1934,
+    "adaptation_images": 2976,
+    "development_images": 527,
+    "test_images": 1856,
+    "test_photographers": 1093,
+    "capture_folds": 5,
+    "photographer_disjoint": true,
+    "images_checked": false
+  },
+  "syntax_checked_python_files": 19,
+  "main_table_rows_verified": 7,
+  "provided_head_predictions": {
+    "cached_external_images_checked": 32,
+    "maximum_absolute_logit_difference": 9.281262656202216e-07,
+    "prediction_labels_identical": true
+  },
+  "credential_pattern_hits": [],
+  "machine_specific_paths": [],
+  "manuscript_pdf_unchanged": true,
+  "gpu_training_rerun": false,
+  "image_encoder_inference_rerun": false,
+  "unit_tests": {
+    "passed": 4,
+    "failed": 0
+  },
+  "runtime_versions": {
+    "numpy": "2.4.1",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.9.1"
+  }
+}

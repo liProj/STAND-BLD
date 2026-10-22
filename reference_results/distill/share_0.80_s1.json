@@ -1,0 +1,42 @@
+{
+ "args": {
+  "conf": "rank0.3",
+  "rounds": "2",
+  "src": "0",
+  "mil": "1",
+  "nap": "1",
+  "tstd": "1",
+  "npool": "1000",
+  "share": "0.80",
+  "seed": "1",
+  "teacher": "L3",
+  "k": "8",
+  "C": "0.1"
+ },
+ "rounds": [
+  {
+   "round": 1,
+   "n_pool": 1000,
+   "n_pos": 300,
+   "n_neg": 300,
+   "teacher_positive_share": 0.694,
+   "pseudo_agree_with_source_taxon": 0.7883333333333333,
+   "dev_auc": 0.9595924206592508,
+   "dev_acc": 0.8519924098671727
+  },
+  {
+   "round": 2,
+   "n_pool": 1000,
+   "n_pos": 300,
+   "n_neg": 300,
+   "teacher_positive_share": 0.694,
+   "pseudo_agree_with_source_taxon": 0.7933333333333333,
+   "dev_auc": 0.95871653382383,
+   "dev_acc": 0.8595825426944972
+  }
+ ],
+ "pool_source": {
+  "bld_taxon": 800,
+  "beech_taxon": 200
+ }
+}

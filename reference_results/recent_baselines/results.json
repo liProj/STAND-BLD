@@ -1,0 +1,110 @@
+[
+  {
+    "tag": "dinov2_b14",
+    "name": "DINOv2-B/14",
+    "year": 2024,
+    "key": "oquab2024",
+    "cache": "vit_base_patch14_dinov2.lvd142m__392",
+    "feature": "cls",
+    "resolution": 392,
+    "paper": "https://arxiv.org/abs/2304.07193",
+    "publication": "TMLR 2024",
+    "official": "https://github.com/facebookresearch/dinov2",
+    "selected_C": 10.0,
+    "source_cv_auc": {
+      "0.001": 0.9310138929354408,
+      "0.01": 0.9383774478253307,
+      "0.1": 0.9412477608567291,
+      "1.0": 0.9474259684121552,
+      "10.0": 0.9510728501178146
+    },
+    "source_feature_sha256": "8bbb859db1584a42369a88534594ee146d06edc0c3a8f02c09dbf0743f59277d",
+    "external_feature_sha256": "f8d7f4033192b005138e9f21bfaafe20f59af7991e5dba10937b173c6268128c",
+    "source_file_sha256": "04d91f2411e3261ea9c79435eeb2868e674dfe71892e403bd4b50589a4d32873",
+    "eval_file_sha256": "d97e4d47652ee849410a35f3712ebcd63fe00f3531af8283072492db5b9811fd",
+    "fit_seconds": 1.0365591049194336,
+    "iterations": [
+      22
+    ],
+    "parts": {
+      "dev": {
+        "acc": 75.71157495256166,
+        "precision": 98.25581395348837,
+        "recall": 57.48299319727891,
+        "f1": 72.53218884120172,
+        "auc": 95.23371580391813,
+        "n": 527,
+        "TP": 169,
+        "FP": 3,
+        "FN": 125,
+        "TN": 230
+      },
+      "test": {
+        "acc": 77.58620689655173,
+        "precision": 99.18433931484503,
+        "recall": 59.66633954857704,
+        "f1": 74.50980392156863,
+        "auc": 95.71064939389356,
+        "n": 1856,
+        "TP": 608,
+        "FP": 5,
+        "FN": 411,
+        "TN": 832
+      }
+    }
+  },
+  {
+    "tag": "siglip2_b16",
+    "name": "SigLIP 2-B/16",
+    "year": 2025,
+    "key": "tschannen2025",
+    "cache": "siglip2-base-patch16-224",
+    "feature": "emb",
+    "resolution": 224,
+    "paper": "https://arxiv.org/abs/2502.14786",
+    "publication": "arXiv preprint, 2025",
+    "official": "https://huggingface.co/google/siglip2-base-patch16-224",
+    "selected_C": 1.0,
+    "source_cv_auc": {
+      "0.001": 0.826150534680272,
+      "0.01": 0.8530545957688638,
+      "0.1": 0.8604624627086405,
+      "1.0": 0.8673474474597564,
+      "10.0": 0.8643785401173605
+    },
+    "source_feature_sha256": "4b7079d3589171c7ad3a081ae6181a88522720b74cb8ce7f8fa1cc7054a5fba8",
+    "external_feature_sha256": "b6a4dafe3128980acc057c05085833a2d61f30efd6af864c275df9312ad09302",
+    "source_file_sha256": "04d91f2411e3261ea9c79435eeb2868e674dfe71892e403bd4b50589a4d32873",
+    "eval_file_sha256": "d97e4d47652ee849410a35f3712ebcd63fe00f3531af8283072492db5b9811fd",
+    "fit_seconds": 1.156930685043335,
+    "iterations": [
+      64
+    ],
+    "parts": {
+      "dev": {
+        "acc": 72.67552182163189,
+        "precision": 91.66666666666666,
+        "recall": 56.12244897959183,
+        "f1": 69.62025316455697,
+        "auc": 84.4559282940644,
+        "n": 527,
+        "TP": 165,
+        "FP": 15,
+        "FN": 129,
+        "TN": 218
+      },
+      "test": {
+        "acc": 71.33620689655173,
+        "precision": 89.59349593495935,
+        "recall": 54.072620215897935,
+        "f1": 67.44186046511628,
+        "auc": 85.1717018230678,
+        "n": 1856,
+        "TP": 551,
+        "FP": 64,
+        "FN": 468,
+        "TN": 773
+      }
+    }
+  }
+]

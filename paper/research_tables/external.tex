@@ -1,0 +1,21 @@
+\begin{table}[htbp]
+\centering\small
+\caption{公众照片测试集上的主性能对比，包含 1,856 张图像及 1,093 名拍摄者。指标均由本文测量并以百分数表示，$\uparrow$ 表示越高越好。前三种 CNN 报告源域微调三个种子的均值。DINOv2 与 SigLIP~2 使用冻结编码器和源域线性分类头，其余均为单模型。EfficientNetV2-S 使用 Waldo 等的公开检查点，其年份为 BLD 应用论文年。其他对照标注模型论文年份，SigLIP~2 为 2025 年预印本。训练与预训练预算见第~\ref{sec:comparison} 节。各列最高值加粗，显示精度下并列最高均加粗。}
+\label{tab:external}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+方法与引用 & 年份 & 准确率$\uparrow$ & 精确率$\uparrow$ & 召回率$\uparrow$ & F1$\uparrow$ & AUC$\uparrow$\\
+\midrule
+Inception-v3\cite{szegedy2016} & 2016 & 71.17 & 87.74 & 57.34 & 67.00 & 85.24\\
+MobileNetV3-Large\cite{howard2019} & 2019 & 69.31 & 89.80 & 51.13 & 63.73 & 84.46\\
+ResNet-50\cite{he2016} & 2016 & 71.26 & 90.82 & 53.06 & 66.82 & 85.10\\
+DINOv2-B/14\cite{oquab2024} & 2024 & 77.59 & \textbf{99.18} & 59.67 & 74.51 & 95.71\\
+SigLIP~2-B/16\cite{tschannen2025} & 2025 & 71.34 & 89.59 & 54.07 & 67.44 & 85.17\\
+EfficientNetV2-S\cite{waldo2026} & 2026 & 81.30 & 81.00 & 86.16 & 83.50 & 89.64\\
+\midrule
+\textbf{STAND（本文）} & 2026 & \textbf{91.38} & 93.87 & \textbf{90.19} & \textbf{91.99} & \textbf{97.25}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

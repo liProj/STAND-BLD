@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering\small
+\caption{完整 STAND 的组件与训练策略对照（\%）。各行相对完整方法改变注明环节，其他设置保持一致。L3 教师为适应前参照。两类等量选样与 STAND 主配置的伪标签数量分别为 1,784 和 1,785。选样比例、训练轮数、标准化及随机种子结果见补充表~\ref{tab:student_settings}。开发与测试数据的使用情况见第~\ref{sec:comparison} 节。各性能列最高值加粗，伪标签数量仅描述训练规模。}
+\label{tab:ablation}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrrr}
+\toprule
+配置 & 伪标签数 & 开发 AUC & 开发准确率 & 测试 AUC & 测试准确率 & \makecell{测试调整\\阈值准确率}\\
+\midrule
+未执行学生适应（L3 教师） & --- & --- & --- & 95.09 & 88.36 & 88.42\\
+两类等量选样（两端各 30\%） & 1784 & 97.69 & 93.55 & 97.07 & 90.57 & 90.95\\
+移除学生局部分支 & 1785 & 96.97 & 90.70 & 96.02 & 87.98 & 89.33\\
+移除学生正交投影 & 1785 & 97.64 & 93.36 & 97.05 & 91.06 & \textbf{91.06}\\
+使用仅全局教师生成伪标签 & 1785 & 97.62 & 91.46 & 97.20 & 90.62 & 91.00\\
+学生训练加入源域标签 & 1785 & 96.92 & 91.08 & 96.58 & 90.25 & 90.41\\
+\textbf{STAND（完整方法）} & 1785 & \textbf{97.85} & \textbf{93.74} & \textbf{97.25} & \textbf{91.38} & \textbf{91.06}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

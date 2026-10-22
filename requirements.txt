@@ -1,0 +1,13 @@
+# Install a compatible PyTorch/torchvision pair for your CUDA version first.
+# This is a dependency list, not a lock of the original GPU training environment.
+numpy
+pandas
+scipy
+scikit-learn
+torch
+torchvision
+timm
+transformers
+Pillow
+requests
+threadpoolctl

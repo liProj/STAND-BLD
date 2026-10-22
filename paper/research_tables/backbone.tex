@@ -1,0 +1,23 @@
+\begin{table}[htbp]
+\centering\small
+\caption{同类全局分类头下的表征与分辨率比较（\%）。$k$ 由训练内验证选择，模型配置依据源域采集批次结果确定，外部列用于迁移分析。各列最高值加粗。}
+\label{tab:backbone}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+设置 & \makecell{采集批次逐折\\AUC} & \makecell{采集批次调整\\阈值准确率} & 外部 AUC & 外部准确率 & \makecell{外部调整\\阈值准确率}\\
+\midrule
+DINOv3-B/16，384（主配置）\cite{simeoni2026} & 97.63 & 90.43 & 94.42 & \textbf{83.41} & 87.18\\
+DINOv3-L/16，384 & \textbf{98.01} & 89.87 & 92.36 & 80.60 & 82.97\\
+DINOv3-S/16，384 & 97.14 & 90.74 & 92.49 & 82.49 & 83.89\\
+DINOv3 ConvNeXt-S，384 & 91.16 & 81.08 & 86.90 & 62.72 & 76.13\\
+DINOv2-B/14，392\cite{oquab2024} & 95.46 & 89.66 & \textbf{96.66} & 80.12 & \textbf{90.41}\\
+DINOv3-B/16，224 & 95.44 & 87.38 & 94.94 & 80.01 & 87.39\\
+DINOv3-B/16，512 & 97.92 & \textbf{92.66} & 95.04 & 82.97 & 87.98\\
+DINOv3-B/16，图像块均值 & 96.42 & 88.06 & 88.23 & 78.29 & 79.74\\
+冻结 EfficientNetV2-S\cite{tan2021} & 79.84 & 69.49 & 68.79 & 63.20 & 61.69\\
+冻结 ResNet-50\cite{he2016} & 80.79 & 71.61 & 77.28 & 68.59 & 65.30\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

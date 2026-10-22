@@ -1,0 +1,22 @@
+\begin{table}[htbp]
+\centering\small
+\caption{局部分类头的聚合、投影与种子敏感性（\%）。融合 AUC 使用全局与局部的平均分数。各列最高值加粗，包括不同种子的结果。}
+\label{tab:pooling}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrrr}
+\toprule
+设置 & \makecell{采集批次逐折\\AUC} & \makecell{采集批次调整\\阈值准确率} & \makecell{外部融合\\AUC} & \makecell{外部局部头\\AUC} & 外部准确率\\
+\midrule
+均值 & 97.82 & 90.80 & 92.89 & 88.32 & 82.92\\
+log-mean-exp，$\tau=0.3$ & 98.46 & 93.17 & 94.97 & 94.24 & 88.15\\
+log-mean-exp，$\tau=1$（主配置） & \textbf{98.53} & 93.69 & 95.09 & 94.29 & 88.36\\
+log-mean-exp，$\tau=3$ & 98.48 & 93.69 & 95.00 & 94.05 & 88.09\\
+最高 10\% 均值 & 98.31 & 93.02 & 94.46 & 92.85 & 87.88\\
+最大值 & 98.29 & 92.86 & 94.76 & 93.32 & 87.88\\
+$\tau=1$，不使用投影 & 95.99 & 91.42 & 95.11 & \textbf{94.74} & 87.12\\
+$\tau=1$，第二个种子 & 98.49 & \textbf{93.74} & \textbf{95.22} & 94.60 & \textbf{88.58}\\
+$\tau=1$，第三个种子 & 98.48 & 93.49 & 95.09 & 94.28 & 88.31\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

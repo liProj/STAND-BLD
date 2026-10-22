@@ -1,0 +1,20 @@
+\begin{table}[htbp]
+\centering\small
+\caption{适应前教师与源域分类器的分组诊断（\%）。L1--L3 为 STAND 的教师构建阶段。采集批次 AUC 为逐折平均值，准确率为合并折外预测后的指标。调整阈值读取待测折无标签分数，属于转导诊断。日—设备列为七组留一准确率。CNN 与冻结头的拟合样本预算不同。粗体表示各列最高值。}
+\label{tab:session}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lrrrr}
+\toprule
+方法 & \makecell{采集批次默认\\准确率} & \makecell{采集批次逐折\\平均 AUC} & \makecell{采集批次调整\\阈值准确率} & \makecell{日—设备\\准确率}\\
+\midrule
+EfficientNetV2-S\cite{tan2021} & 73.84 & 86.94 & 78.44 & ---\\
+Inception-v3\cite{szegedy2016} & 80.82 & 86.46 & 80.82 & ---\\
+MobileNetV3-Large\cite{howard2019} & 80.82 & 91.90 & 83.92 & ---\\
+ResNet-50\cite{he2016} & 69.44 & 78.74 & 74.92 & ---\\
+L1 冻结全局分类 & \textbf{86.19} & 97.48 & 91.62 & 88.16\\
+L2 加入正交投影 & 84.75 & 97.63 & 90.43 & 88.73\\
+L3 STAND 教师（未适应） & 80.97 & \textbf{98.53} & \textbf{93.69} & \textbf{89.97}\\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}

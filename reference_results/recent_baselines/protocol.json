@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-22T14:48:18.523526+00:00",
+  "models": [
+    {
+      "tag": "dinov2_b14",
+      "name": "DINOv2-B/14",
+      "year": 2024,
+      "key": "oquab2024",
+      "cache": "vit_base_patch14_dinov2.lvd142m__392",
+      "feature": "cls",
+      "resolution": 392,
+      "paper": "https://arxiv.org/abs/2304.07193",
+      "publication": "TMLR 2024",
+      "official": "https://github.com/facebookresearch/dinov2"
+    },
+    {
+      "tag": "siglip2_b16",
+      "name": "SigLIP 2-B/16",
+      "year": 2025,
+      "key": "tschannen2025",
+      "cache": "siglip2-base-patch16-224",
+      "feature": "emb",
+      "resolution": 224,
+      "paper": "https://arxiv.org/abs/2502.14786",
+      "publication": "arXiv preprint, 2025",
+      "official": "https://huggingface.co/google/siglip2-base-patch16-224"
+    }
+  ],
+  "include_all_candidates": true,
+  "source": "data/bld/groups.csv",
+  "source_n": 1934,
+  "external": "data/inat/eval.csv",
+  "external_test_n": 1856,
+  "feature_normalization": "source-train-only per-dimension population SD + 1e-8",
+  "classifier": "class-balanced L2 logistic regression",
+  "C_grid": [
+    0.001,
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "selection": "pooled source-only fivefold StratifiedGroupKFold AUC, shuffle=True, seed=0; ties to 4 decimals choose smaller C",
+  "decision_threshold": "logit > 0",
+  "nuisance_projection": false,
+  "target_adaptation": false,
+  "context": "retrospective new baselines added to an already inspected test set",
+  "sklearn": "1.7.2",
+  "numpy": "2.4.1",
+  "python": "3.13.5"
+}
